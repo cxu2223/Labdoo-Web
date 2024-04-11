@@ -680,13 +680,59 @@
           </div>
         </div>
 
-        <p class="enunciat-reto-p">Ara passarem a modificar la configuració </p>
+        <p class="enunciat-reto-p">Ara passarem a modificar la configuració.</p>
         <div class="enunciat-reto-centro">
           <div class="terminal">
-            <p class="sudo" id="p44">sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout escolalabdoo.key -out escolalabdoo.crt</p>
+            <p class="sudo" id="p44">sudo nano /etc/apache2/sites-available/default-ssl.conf</p>
             <button class="terminal-button" onclick="myFunction('p44')"><img src="images/clipboard.png" class="terminal-icono"></button>
           </div>
         </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-sslconf-apache.png" alt="Arxiu ssl.conf de Apache a Ubuntu" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Un cop acabada la configuració, canviarem el nom de l'arxiu.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p45">sudo cp default-ssl.conf escolalabdoo.conf</p>
+            <button class="terminal-button" onclick="myFunction('p45')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per aplicar els canvis habilitarem el nostre arxiu nou, deshabilitarem l'anterior i reiniciarem el servei apache.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p46">sudo a2dissite 000-default.conf && sudo a2ensite escolalabdoo.conf</p>
+            <button class="terminal-button" onclick="myFunction('p46')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p47">sudo systemctl reload apache2</p>
+            <button class="terminal-button" onclick="myFunction('p47')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per acabar habilitarem els protocols necessaris.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p48">sudo ufw allow http</p>
+            <button class="terminal-button" onclick="myFunction('p48')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p49">sudo ufw allow https</p>
+            <button class="terminal-button" onclick="myFunction('p49')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per comprovar que està tot correctament funcionant, ens conectarem des d'un client i buscarem la web des d'un navegador.</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/certificat-ubuntu.png" alt="Certificat SSL d'Ubuntu" class="I-dhcp">
+        </div>
+        
+
       </div>
     </section>
 
