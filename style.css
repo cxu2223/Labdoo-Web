@@ -28,13 +28,29 @@ body {
     z-index: 3;
 }
 
+.flecha-index {
+  position: fixed;
+  top: 88%;
+  right: 1%;
+  background-color: #a3b8eb;
+  z-index: 2;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.flecha-index img {
+  padding: 10px;
+}
+
 footer {
+    position: relative;
     background-color: #a3b8eb;
     padding: 10px;
     text-align: left;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
+    z-index: 3;
 }
 
 footer p {
