@@ -143,7 +143,7 @@
 
       <div class="enunciat-reto-100" id="firewall">
         <h3 class="enunciat-reto-titulo">FIREWALL</h3>
-        <p class="enunciat-reto-p">Per al firewall només configurarem una regla:</p>
+        <p class="enunciat-reto-p">Per al firewall només configurarem dues regles:</p>
         <ul>
           <li class="enunciat-lista">Control de descàrregues: Establir polítiques per controlar i gestionar descàrregues de grans volums, 
             evitant la saturació de la xarxa i assegurant una distribució equitativa dels recursos.</li>
@@ -160,7 +160,15 @@
         </ul>
         <p class="enunciat-reto-p">Per implementar aquesta regla a PFSense hem d'anar a <b class="b-verde">Firewall > Traffic Shaper</b>.</p>
         <div class="enunciat-reto-centro">
-          <img src="images/captura-firewall.png" alt="PFSense logo" class="I-topologia-mixto">
+          <img src="images/captura-firewall.png" alt="Firewall" class="I-topologia-mixto">
+        </div>
+        <ul>
+          <li class="enunciat-lista">Monitorització i informes: Implementar eines de monitorització i generació de informes per supervisar l'ús d'Internet i identificar patrons d'ús. 
+            Aquesta informació pot ser valuosa per a la planificació i la millora de l'entorn d'aprenentatge digital.
+          </li>
+        </ul>
+        <div class="enunciat-reto-centro">
+          <img src="images/foto3-reto8.png" alt="Firewall" class="I-topologia-mixto">
         </div>
       </div>
 
@@ -174,9 +182,7 @@
             restringint l'accés durant hores no lectives o en períodes específics.</li>
           <li class="enunciat-lista">Control d'accés basat en polítiques: Establir polítiques d'accés basades en rols o en grups d'usuaris. 
             Això pot permetre diferents nivells d'accés a Internet segons els requisits educatius o els privilegis de l'usuari.</li>
-          <li class="enunciat-lista">Monitorització i informes: Implementar eines de monitorització i generació de informes per supervisar l'ús d'Internet i identificar patrons d'ús. 
-            Aquesta informació pot ser valuosa per a la planificació i la millora de l'entorn d'aprenentatge digital.
-          </li>
+
         </ul>
         <p class="enunciat-reto-p">El plugin de Squid a PFSense té moltes limitacions deixant una configuració molt bàsica i sense cumplir els requeriments mínims que volem, 
           l'alternativa a aixó és instal·lar i configurar un proxy extern per desprès enllaçar-lo al nostre firewall de Pfsense. Per fer aquesta configuració hem d'anar a: <b class="b-verde">System > General Setup > Proxy Support</b></p>
